@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>GET INSTANT REWARDS</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        overflow-x: hidden;
+        min-height: 100vh;
+      }
+      .container {
+        max-width: 100%;
+        padding: 16px;
+      }
+      header {
+        text-align: center;
+        color: white;
+        padding: 20px 0;
+        animation: slideDown 0.3s ease-out;
+      }
+      header h1 {
+        font-size: 32px;
+        font-weight: 900;
+        margin-bottom: 8px;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+      }
+      header p {
+        font-size: 14px;
+        opacity: 0.95;
+        font-weight: 600;
+      }
+      .timer {
+        background: rgba(255, 255, 255, 0.15);
+        backdrop-filter: blur(10px);
+        color: white;
+        text-align: center;
+        padding: 16px;
+        margin: 16px 0;
+        border-radius: 8px;
+        font-size: 18px;
+        font-weight: bold;
+        border: 2px solid rgba(255, 255, 255, 0.3);
+      }
+      .countdown {
+        color: #ff4757;
+        font-size: 24px;
+      }
+      .offers {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 12px;
+        margin: 20px 0;
+      }
+      .offer-card {
+        background: white;
+        border-radius: 12px;
+        padding: 16px;
+        animation: slideUp 0.4s ease-out;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        border: 2px solid #ffd700;
+        position: relative;
+      }
+      .offer-card:nth-child(1) {
+        animation-delay: 0.1s;
+      }
+      .offer-card:nth-child(2) {
+        animation-delay: 0.15s;
+      }
+      .offer-card:nth-child(3) {
+        animation-delay: 0.2s;
+      }
+      .offer-card:nth-child(4) {
+        animation-delay: 0.25s;
+      }
+      .offer-card:nth-child(5) {
+        animation-delay: 0.3s;
+      }
+      .offer-card:nth-child(6) {
+        animation-delay: 0.35s;
+      }
+      .testimonial {
+        color: #667eea;
+        font-size: 12px;
+        font-weight: 600;
+        margin-bottom: 8px;
+      }
+      .offer-title {
+        font-size: 16px;
+        font-weight: 800;
+        color: #000;
+        margin-bottom: 6px;
+      }
+      .offer-desc {
+        font-size: 13px;
+        color: #555;
+        margin-bottom: 12px;
+      }
+      .claim-btn {
+        width: 100%;
+        padding: 14px;
+        background: linear-gradient(135deg, #ff4757 0%, #ff6b7a 100%);
+        color: white;
+        border: none;
+        border-radius: 8px;
+        font-weight: 900;
+        font-size: 15px;
+        cursor: pointer;
+        transition: transform 0.2s, box-shadow 0.2s;
+        box-shadow: 0 5px 15px rgba(255, 71, 87, 0.4);
+      }
+      .claim-btn:active {
+        transform: scale(0.98);
+      }
+      .urgent-badge {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        background: #ff4757;
+        color: white;
+        padding: 4px 8px;
+        border-radius: 4px;
+        font-size: 10px;
+        font-weight: 900;
+        animation: pulse 1s infinite;
+      }
+      .social-proof {
+        background: rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(10px);
+        color: white;
+        text-align: center;
+        padding: 16px;
+        margin: 20px 0;
+        border-radius: 8px;
+        border: 1px solid rgba(255, 255, 255, 0.2);
+      }
+      .proof-item {
+        font-size: 12px;
+        margin: 6px 0;
+        animation: fadeIn 0.5s ease-out;
+      }
+      .proof-highlight {
+        color: #ffd700;
+        font-weight: 900;
+      }
+      .trust-badge {
+        display: flex;
+        justify-content: center;
+        gap: 12px;
+        margin: 20px 0;
+        padding: 12px;
+        background: rgba(255, 255, 255, 0.05);
+        border-radius: 8px;
+      }
+      .badge {
+        font-size: 11px;
+        color: rgba(255, 255, 255, 0.8);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      .badge-icon {
+        font-size: 20px;
+        margin-bottom: 4px;
+      }
+      @keyframes slideDown {
+        from {
+          opacity: 0;
+          transform: translateY(-20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+      @keyframes slideUp {
+        from {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+      @keyframes pulse {
+        0%,
+        100% {
+          opacity: 1;
+        }
+        50% {
+          opacity: 0.6;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>🎉 GET INSTANT REWARDS</h1>
+        <p>Limited Time Offers - Claim Now Before They're Gone!</p>
+      </header>
+
+      <div class="timer">
+        Offer expires in: <span class="countdown" id="timer">05:23</span>
+      </div>
+
+      <div class="offers">
+        <!-- OFFER 1: Mobile Gaming -->
+        <div class="offer-card">
+          <div class="urgent-badge">LAST CHANCE</div>
+          <div class="testimonial">💰 Alex just earned $50 playing games!</div>
+          <div class="offer-title">Get Paid to Level Up in Mobile Games</div>
+          <div class="offer-desc">
+            Play your favorite games & earn real cash rewards instantly
+          </div>
+          <button
+            class="claim-btn"
+            onclick="window.location.href='YOUR_AFFILIATE_LINK_1';"
+          >
+            CLAIM NOW
+          </button>
+        </div>
+
+        <!-- OFFER 2: Walmart Coupons -->
+        <div class="offer-card">
+          <div class="urgent-badge">LAST CHANCE</div>
+          <div class="testimonial">🛒 Sarah just saved $145 on groceries!</div>
+          <div class="offer-title">
+            Get Discounted Walmart Coupons - Up to 80% Off
+          </div>
+          <div class="offer-desc">
+            Exclusive coupon codes for Walmart + Free shipping offers
+          </div>
+          <button
+            class="claim-btn"
+            onclick="window.location.href='YOUR_AFFILIATE_LINK_2';"
+          >
+            CLAIM NOW
+          </button>
+        </div>
+
+        <!-- OFFER 3: Amazon Gift Card -->
+        <div class="offer-card">
+          <div class="urgent-badge">LAST CHANCE</div>
+          <div class="testimonial">🎁 Mike just got $100 Amazon Gift Card!</div>
+          <div class="offer-title">FREE $100 Amazon Gift Card</div>
+          <div class="offer-desc">
+            Just complete 1 simple verification task - takes 2 minutes
+          </div>
+          <button
+            class="claim-btn"
+            onclick="window.location.href='YOUR_AFFILIATE_LINK_3';"
+          >
+            CLAIM NOW
+          </button>
+        </div>
+
+        <!-- OFFER 4: Cash App Money -->
+        <div class="offer-card">
+          <div class="urgent-badge">LAST CHANCE</div>
+          <div class="testimonial">
+            💳 Jessica just received $75 via Cash App!
+          </div>
+          <div class="offer-title">Instant Cash App Transfer - $50-$200</div>
+          <div class="offer-desc">
+            Get free money directly to your Cash App account instantly
+          </div>
+          <button
+            class="claim-btn"
+            onclick="window.location.href='glstrk.com/?offer_ids=MzUwNiwyNzAx&affiliate_id=MTQzNTI3';"
+          >
+            CLAIM NOW
+          </button>
+        </div>
+
+        <!-- OFFER 5: Survey Rewards -->
+        <div class="offer-card">
+          <div class="urgent-badge">LAST CHANCE</div>
+          <div class="testimonial">✅ David just earned $80 from surveys!</div>
+          <div class="offer-title">
+            Get Paid for Taking Surveys - Easy Money
+          </div>
+          <div class="offer-desc">
+            Answer quick surveys & earn cash daily - 100% legitimate
+          </div>
+          <button
+            class="claim-btn"
+            onclick="window.location.href='glstrk.com/?offer_ids=MzUwNiwyNzAx&affiliate_id=MTQzNTI3';"
+          >
+            CLAIM NOW
+          </button>
+        </div>
+
+        <!-- OFFER 6: Streaming Discounts -->
+        <div class="offer-card">
+          <div class="urgent-badge">LAST CHANCE</div>
+          <div class="testimonial">
+            📺 Emma just got 1 year of streaming free!
+          </div>
+          <div class="offer-title">
+            Free Premium Streaming - Netflix, Disney+ & More
+          </div>
+          <div class="offer-desc">
+            Get 12 months free access to premium streaming services
+          </div>
+          <button
+            class="claim-btn"
+            onclick="window.location.href='glstrk.com/?offer_ids=MzUwNiwyNzAx&affiliate_id=MTQzNTI3';"
+          >
+            CLAIM NOW
+          </button>
+        </div>
+      </div>
+
+      <div class="social-proof">
+        <strong>🔴 LIVE ACTIVITY</strong>
+        <div class="proof-item">
+          👤 <span class="proof-highlight">3 people</span> claimed offers in the
+          last minute
+        </div>
+        <div class="proof-item">
+          ⏰ <span class="proof-highlight">47 claims</span> today - Limited
+          slots remaining!
+        </div>
+        <div class="proof-item">
+          ⚡ Next slot available in
+          <span class="proof-highlight">2 minutes</span>
+        </div>
+      </div>
+
+      <div class="trust-badge">
+        <div class="badge">
+          <div class="badge-icon">🔒</div>
+          100% Secure
+        </div>
+        <div class="badge">
+          <div class="badge-icon">✅</div>
+          Verified
+        </div>
+        <div class="badge">
+          <div class="badge-icon">⭐</div>
+          Trusted
+        </div>
+      </div>
+    </div>
+
+    <script>
+      let seconds = 323;
+      setInterval(() => {
+        seconds--;
+        const mins = Math.floor(seconds / 60);
+        const secs = seconds % 60;
+        document.getElementById("timer").textContent =
+          String(mins).padStart(2, "0") + ":" + String(secs).padStart(2, "0");
+        if (seconds <= 0) seconds = 323;
+      }, 1000);
+    </script>
+  </body>
+</html>
