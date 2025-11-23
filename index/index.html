@@ -114,6 +114,7 @@
       .offer-card:nth-child(6) {
         animation-delay: 0.35s;
       }
+
       .testimonial {
         color: #667eea;
         font-size: 12px;
@@ -147,6 +148,7 @@
       .claim-btn:active {
         transform: scale(0.98);
       }
+
       .urgent-badge {
         position: absolute;
         top: 10px;
@@ -159,6 +161,7 @@
         font-weight: 900;
         animation: pulse 1s infinite;
       }
+
       .social-proof {
         background: rgba(255, 255, 255, 0.1);
         backdrop-filter: blur(10px);
@@ -169,15 +172,7 @@
         border-radius: 8px;
         border: 1px solid rgba(255, 255, 255, 0.2);
       }
-      .proof-item {
-        font-size: 12px;
-        margin: 6px 0;
-        animation: fadeIn 0.5s ease-out;
-      }
-      .proof-highlight {
-        color: #ffd700;
-        font-weight: 900;
-      }
+
       .trust-badge {
         display: flex;
         justify-content: center;
@@ -186,54 +181,6 @@
         padding: 12px;
         background: rgba(255, 255, 255, 0.05);
         border-radius: 8px;
-      }
-      .badge {
-        font-size: 11px;
-        color: rgba(255, 255, 255, 0.8);
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-      }
-      .badge-icon {
-        font-size: 20px;
-        margin-bottom: 4px;
-      }
-      @keyframes slideDown {
-        from {
-          opacity: 0;
-          transform: translateY(-20px);
-        }
-        to {
-          opacity: 1;
-          transform: translateY(0);
-        }
-      }
-      @keyframes slideUp {
-        from {
-          opacity: 0;
-          transform: translateY(20px);
-        }
-        to {
-          opacity: 1;
-          transform: translateY(0);
-        }
-      }
-      @keyframes fadeIn {
-        from {
-          opacity: 0;
-        }
-        to {
-          opacity: 1;
-        }
-      }
-      @keyframes pulse {
-        0%,
-        100% {
-          opacity: 1;
-        }
-        50% {
-          opacity: 0.6;
-        }
       }
     </style>
   </head>
@@ -250,8 +197,111 @@
       </div>
 
       <div class="offers">
-        <!-- OFFER CARDS (UNCHANGED CONTENT) -->
-        <!-- Keep your offer content exactly as it was -->
+        <!-- OFFER 1: Mobile Gaming -->
+        <div class="offer-card">
+          <div class="urgent-badge">LAST CHANCE</div>
+          <div class="testimonial">💰 Alex just earned $50 playing games!</div>
+          <div class="offer-title">Get Paid to Level Up in Mobile Games</div>
+          <div class="offer-desc">
+            Play your favorite games & earn real cash rewards instantly
+          </div>
+          <button
+            class="claim-btn"
+            onclick="window.location.href='https://glstrk.com/?offer_ids=MzUwNiwyNzAx&affiliate_id=MTQzNTI3';"
+          >
+            CLAIM NOW
+          </button>
+        </div>
+
+        <!-- OFFER 2: Walmart Coupons -->
+        <div class="offer-card">
+          <div class="urgent-badge">LAST CHANCE</div>
+          <div class="testimonial">🛒 Sarah just saved $145 on groceries!</div>
+          <div class="offer-title">
+            Get Discounted Walmart Coupons - Up to 80% Off
+          </div>
+          <div class="offer-desc">
+            Exclusive coupon codes for Walmart + Free shipping offers
+          </div>
+          <button
+            class="claim-btn"
+            onclick="window.location.href='https://glstrk.com/?offer_ids=MzUwNiwyNzAx&affiliate_id=MTQzNTI3';"
+          >
+            CLAIM NOW
+          </button>
+        </div>
+
+        <!-- OFFER 3: Amazon Gift Card -->
+        <div class="offer-card">
+          <div class="urgent-badge">LAST CHANCE</div>
+          <div class="testimonial">🎁 Mike just got $100 Amazon Gift Card!</div>
+          <div class="offer-title">FREE $100 Amazon Gift Card</div>
+          <div class="offer-desc">
+            Just complete 1 simple verification task - takes 2 minutes
+          </div>
+          <button
+            class="claim-btn"
+            onclick="window.location.href='https://glstrk.com/?offer_ids=MzUwNiwyNzAx&affiliate_id=MTQzNTI3';"
+          >
+            CLAIM NOW
+          </button>
+        </div>
+
+        <!-- OFFER 4: Cash App Money -->
+        <div class="offer-card">
+          <div class="urgent-badge">LAST CHANCE</div>
+          <div class="testimonial">
+            💳 Jessica just received $75 via Cash App!
+          </div>
+          <div class="offer-title">Instant Cash App Transfer - $50-$200</div>
+          <div class="offer-desc">
+            Get free money directly to your Cash App account instantly
+          </div>
+          <button
+            class="claim-btn"
+            onclick="window.location.href='https://glstrk.com/?offer_ids=MjcwMSwyMDU5&affiliate_id=MTQzNTI3';"
+          >
+            CLAIM NOW
+          </button>
+        </div>
+
+        <!-- OFFER 5: Survey Rewards -->
+        <div class="offer-card">
+          <div class="urgent-badge">LAST CHANCE</div>
+          <div class="testimonial">✅ David just earned $80 from surveys!</div>
+          <div class="offer-title">
+            Get Paid for Taking Surveys - Easy Money
+          </div>
+          <div class="offer-desc">
+            Answer quick surveys & earn cash daily - 100% legitimate
+          </div>
+          <button
+            class="claim-btn"
+            onclick="window.location.href='https://glstrk.com/?offer_ids=MzUwNiwyNzAx&affiliate_id=MTQzNTI3';"
+          >
+            CLAIM NOW
+          </button>
+        </div>
+
+        <!-- OFFER 6: Streaming Discounts -->
+        <div class="offer-card">
+          <div class="urgent-badge">LAST CHANCE</div>
+          <div class="testimonial">
+            📺 Emma just got 1 year of streaming free!
+          </div>
+          <div class="offer-title">
+            Free Premium Streaming - Netflix, Disney+ & More
+          </div>
+          <div class="offer-desc">
+            Get 12 months free access to premium streaming services
+          </div>
+          <button
+            class="claim-btn"
+            onclick="window.location.href='https://glstrk.com/?offer_ids=MzUwNiwyNzAx&affiliate_id=MTQzNTI3';"
+          >
+            CLAIM NOW
+          </button>
+        </div>
       </div>
 
       <div class="social-proof">
@@ -285,7 +335,6 @@
         </div>
       </div>
     </div>
-
     <script>
       let seconds = 323;
       setInterval(() => {
@@ -298,7 +347,7 @@
       }, 1000);
     </script>
 
-    <!-- ✅ Popunder (must be before </body>) -->
+    <!-- ✅ Onclick Popunder (MUST be before </body>) -->
     <script>
       (function (s) {
         s.dataset.zone = "10225317";
